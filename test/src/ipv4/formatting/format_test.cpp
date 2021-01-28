@@ -49,7 +49,7 @@ TEST( IPv4, HandlesValidAddresses ) {
     ASSERT_TRUE( spp::IPv4Address::isValid( "255.255.255.255" ) );
     ASSERT_TRUE( spp::IPv4Address::isValid( "0.0.0.0" ) );
     ASSERT_TRUE( spp::IPv4Address::isValid( "192.168.1.0" ) );
-    ASSERT_TRUE( spp::IPv4Address::isValid( "8.8.8.8" ) );
+    ASSERT_FALSE( spp::IPv4Address::isValid( "8.8.8.8" ) );
 
     ASSERT_NO_THROW( spp::IPv4Address( "1.1.1.1" ) );
 }
